@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Clean Login Page – Next.js & Tailwind
 
-## Getting Started
+A clean and modern login page built with Next.js, Tailwind CSS, React Hook Form, and Zod.
 
-First, run the development server:
+This project is part of **Silent Dev Studio**, a collection of calm and focused frontend projects — no voice, no distractions, just code.
+
+---
+
+## ✨ Preview
+
+![Preview](./preview.png)
+
+---
+
+## 🛠 Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- React Hook Form
+- Zod
+
+---
+
+## 📁 Project Goal
+
+- Build a clean and responsive authentication UI
+- Apply form validation with React Hook Form and Zod
+- Practice clean component structure and modern frontend patterns
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to see the project.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
+🎥 Video
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Watch the full build on YouTube:
+👉 https://youtube.com/@silentdevstudio
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+☕ Support
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you enjoy this project and want to support more silent coding content:
+👉 https://buymeacoffee.com/silentdevstudio
