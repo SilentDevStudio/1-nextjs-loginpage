@@ -8,7 +8,8 @@ This project is part of **Silent Dev Studio**, a collection of calm and focused 
 
 ## ✨ Preview
 
-![Preview](./preview.png)
+<img width="1552" height="869" alt="image" src="https://github.com/user-attachments/assets/f4b516a0-11d2-4750-9455-7cec33b13522" />
+
 
 ---
 
