@@ -44,7 +44,7 @@ Open http://localhost:3000 to see the project.
 🎥 Video
 
 Watch the full build on YouTube:
-👉 https://youtube.com/@silentdevstudio
+👉 [https://youtube.com/@silentdevstudio](https://youtu.be/-MVbiIi2HzQ)
 
 ---
 
