@@ -52,4 +52,4 @@ Watch the full build on YouTube:
 ☕ Support
 
 If you enjoy this project and want to support more silent coding content:
-👉 https://buymeacoffee.com/silentdevstudio
+👉 [https://buymeacoffee.com/silentdevstudio](https://buymeacoffee.com/silentdev)
