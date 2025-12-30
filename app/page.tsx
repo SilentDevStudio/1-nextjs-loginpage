@@ -3,6 +3,9 @@ import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { supabase } from "./lib/supabase/client";
+import { useRouter } from "next/navigation";
+
 
 // 1. Setting up the validation schema with zod
 const loginSchema = z.object({
@@ -14,6 +17,9 @@ const loginSchema = z.object({
 type LoginFormInputs = z.infer<typeof loginSchema>;
 
 export default function Home() {
+
+  const router = useRouter()
+ 
   //2. Setting up the Hook form
   const {
     register,
@@ -22,14 +28,29 @@ export default function Home() {
     formState: { errors, isSubmitting },
   } = useForm<LoginFormInputs>({
     resolver: zodResolver(loginSchema),
+    
   });
 
   // Simulating an API call (e.g., 2 seconds wait)
   const onSubmit = async (data: LoginFormInputs) => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    console.log("Loggedin successfully: ", data);
-    alert("Logged in succesfully");
-    reset();
+   try {
+    const {email, password} = data
+
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    })
+    if (error) {
+      throw error
+    }
+    console.log("User logged in succesfully")
+    
+    reset()
+    router.push("/dashboard")
+   } catch (error: any) {
+    console.error("Login error: ", error.message)
+    alert(error.message)
+   }
   };
 
   return (
@@ -66,7 +87,7 @@ export default function Home() {
                   {...register("email")}
                   type="email"
                   placeholder="Email"
-                  className={`w-full bg-gray-100 p-3 text-sm text-gray-600 outline-none transition focus:ring-2 ${
+                  className={`w-full bg-gray-100 p-3 text-sm text-gray-600 rounded-md outline-none transition focus:ring-2 ${
                     errors.email
                       ? "focus:ring-red-400 border border-red-400"
                       : "focus:ring-blue-400"
@@ -87,7 +108,7 @@ export default function Home() {
                   {...register("password")}
                   type="password"
                   placeholder="Password"
-                  className={`w-full bg-gray-100 p-3 text-sm text-gray-600 outline-none transition focus:ring-2 ${
+                  className={`w-full bg-gray-100 p-3 text-sm text-gray-600 rounded-md outline-none transition focus:ring-2 ${
                     errors.password
                       ? "focus:ring-red-400 border border-red-400"
                       : "focus:ring-blue-400"
