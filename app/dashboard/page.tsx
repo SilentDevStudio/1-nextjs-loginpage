@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { supabase } from "../lib/supabase/client";
+import { supabase } from "@/utils/supabase/client";
 
 export default function Dashboard() {
   const router = useRouter()
@@ -12,7 +12,8 @@ export default function Dashboard() {
     try {
       setLoading(true)
       await supabase.auth.signOut()
-      router.push("/")
+      router.refresh()
+      router.push("/login")
     } catch (error) {
       console.error(error)
     } finally {
